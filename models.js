@@ -15,7 +15,8 @@ var userSchema = mongoose.Schema({
   },
   therapist: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Therapist'
+    ref: 'Therapist',
+    required: true
   },
   dob: {
     type: Date,

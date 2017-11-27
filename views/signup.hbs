@@ -1,15 +1,16 @@
 <div class="login-container">
   <img class="login-logo" src="/images/logo.jpg"/>
   <h1>Sign up</h1>
+  {{msg}}
   <form class="form-group" action="/signup" method="post">
     <div class="login-input">
       <div>Full name:</div><input type="text" name="fullname"/>
     </div>
     <div class="login-input">
-      <div>Birthday:</div><input type="date" name="date"/>
+      <div>Birthday:</div><input type="date" name="dob"/>
     </div>
     <div class="login-input">
-      <div>Therapist Name:</div><input type="text" name="therapist"/>
+      <div>Therapist Email:</div><input type="text" name="therapist"/>
     </div>
     <div class="login-input">
       <div>Username:</div><input type="text" name="username"/>
@@ -17,7 +18,7 @@
     <div class="login-input">
       <div>Password: </div><input type="password" name="password"/>
     </div>
-    <button type="submit">Click here to log in</button>
+    <button type="submit">Click here to sign up</button>
   </form>
   <p>
     Already have an account? <a href="/login">Log in here</a>

@@ -59,6 +59,7 @@ passport.use(new LocalStrategy(function(username, password, done) {
       return done(null, false);
     }
     // auth has has succeeded
+    console.log('success');
     return done(null, user);
   });
 }));
@@ -66,11 +67,9 @@ passport.use(new LocalStrategy(function(username, password, done) {
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Uncomment these out after you have implemented passport in step 1
 app.use('/', auth(passport));
 app.use('/', routes);
 
-// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
