@@ -1,1 +1,33 @@
-/* YOUR STYLES HERE */
+body {
+  font-family: Helvetica Neue;
+  height: 100%;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-logo {
+  padding: 30px;
+  width: 300px;
+  height: auto;
+}
+
+.login-input {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 5px 0px;
+}
+
+.form-group {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  flex-direction: column;
+}

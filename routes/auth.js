@@ -29,7 +29,6 @@ module.exports = function(passport) {
         res.send(500);
       }
       else {
-        console.log("Saved a new user! ", savedUser);
         res.redirect('/login');
       }
     })

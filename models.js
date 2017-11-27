@@ -1,41 +1,61 @@
 var mongoose = require('mongoose');
 var connect = process.env.MONGODB_URI;
 
-// If you're getting an error here, it's probably because
-// your connect string is not defined or incorrect.
 mongoose.connect(connect);
 
-// Step 1: Write your schemas here!
-// Remember: schemas are like your blueprint, and models
-// are like your building!
 var userSchema = mongoose.Schema({
   username: {
     type: String,
     required: true
   },
-  password: String
+  password: String,
+  fullname: {
+    type: String,
+    required: true
+  },
+  therapist: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Therapist'
+  },
+  dob: {
+    type: Date,
+    required: true
+  }
 });
 
-
-var puppySchema = mongoose.Schema({
-  name: String,
-  brain: {
+var therapistSchema = mongoose.Schema({
+  username: {
     type: String,
-    enum: ['big', 'small', 'medium', 'pea-sized', 'peter-sized']
+    required: true
   },
-  imageUrl: String,
-  owner: {
+  password: String,
+  fullname: {
+    type: String,
+    required: true
+  },
+  patients: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
-  }
+  }],
+  email: {
+    type: String,
+    required: true
+  },
+});
+
+var moodSchema = mongoose.Schema({
+  code: Number,
+  date: Date,
+  description: String
 })
 
-// Step 2: Create all of your models here, as properties.
-var User = mongoose.model('User', userSchema);
-var Puppy = mongoose.model('Puppy', puppySchema);
 
-// Step 3: Export your models object
+var User = mongoose.model('User', userSchema);
+var Therapist = mongoose.model('Therapist', therapistSchema);
+var Mood = mongoose.model('Mood', moodSchema);
+
 module.exports = {
   User: User,
-  Puppy: Puppy
+  Therapist: Therapist,
+  Mood: Mood
 }

@@ -1,12 +1,25 @@
-<div>
+<div class="login-container">
+  <img class="login-logo" src="/images/logo.jpg"/>
   <h1>Sign up</h1>
-  <form action="/signup" method="post">
-    <span>Username: <input type="text" name="username"/></span>
-    <span>Password: <input type="password" name="password"/></span>
-    <button type="submit">Click here to sign in</button>
+  <form class="form-group" action="/signup" method="post">
+    <div class="login-input">
+      <div>Full name:</div><input type="text" name="fullname"/>
+    </div>
+    <div class="login-input">
+      <div>Birthday:</div><input type="date" name="date"/>
+    </div>
+    <div class="login-input">
+      <div>Therapist Name:</div><input type="text" name="therapist"/>
+    </div>
+    <div class="login-input">
+      <div>Username:</div><input type="text" name="username"/>
+    </div>
+    <div class="login-input">
+      <div>Password: </div><input type="password" name="password"/>
+    </div>
+    <button type="submit">Click here to log in</button>
   </form>
-</div>
-
-<div>
-  <button><a href="/login">Click here to log in instead</a></button>
+  <p>
+    Already have an account? <a href="/login">Log in here</a>
+  </p>
 </div>
