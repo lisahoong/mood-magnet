@@ -1,0 +1,300 @@
+body, html {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dash {
+  background-color: #cecece;
+  height: 80px;
+}
+
+.dash-header {
+  color: #7c7c7c;
+  font-weight: 200;
+  text-align: center;
+}
+
+.dash-bar {
+  height: 5px;
+  background-color: #52A8A3;
+  margin-bottom: 15px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.admin-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn {
+  text-align: center;
+  padding: 5px;
+  width: 200px;
+  border: 1px solid #7c7c7c;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+#search {
+  width: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.add {
+  background-color: #a3d86a;
+}
+
+.search {
+  font-size: 20px;
+  color: (255, 255, 255, .25)
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 70vh;
+  border: 1px solid #7c7c7c;
+}
+
+.data-col {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  border: 1px solid pink;
+}
+
+.data-row {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+}
+
+.data-username {
+  flex: 1;
+}
+
+.data-mood {
+  flex: 1;
+}
+
+.data-common {
+  flex: 2;
+}
+
+.data-progress {
+  flex: 3;
+}
+
+.data-col-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  text-align: center;
+  background-color: #dddddd;
+  border-bottom: 1px solid #7c7c7c;
+}
+
+.registration-input-row {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.input-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reg-input {
+  border-radius: 4px;
+  border: 1px solid #7c7c7c;
+  margin-left: 10px;
+  width: 250px;
+  padding: 5px 10px;
+}
+
+.radio {
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-btn {
+  width: 200px;
+  background-color: #AFD578;
+  border: 1px solid #7c7c7c;
+  padding: 10px;
+  margin: 10px 0px;
+}
+
+img.mood {
+  width: 80px;
+  height: auto;
+  margin: 5px 8px;
+}
+
+.selected {
+  border: 3px solid black;
+}
+
+.moods-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  width: 250px;
+  height: auto;
+}
+
+.desc {
+  width: 275px;
+  height: 80px;
+  border: 1px solid #7c7c7c;
+}
+
+.bar-text {
+  display: flex;
+  width: 275px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bar-group {
+  display: flex;
+  width: 275px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+h4 {
+  margin: 15px 0px;
+}
+
+.scale-input {
+  border: 1px solid #7c7c7c;
+  width: 25px;
+  height: 20px;
+  margin: 5px;
+}
+
+.patient-header {
+  background-color: #5b5b5b;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+}
+
+.mood-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-desc {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.point-info {
+  text-align: left;
+  width: 100%;
+}
+
+.point-info p{
+  margin: 2px 0px;
+}
+
+.dropdown span {
+  background-color:
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .col {
+
+    }
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #cecece;
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.dropdown-content p {
+  cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #cecece;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px 5px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.p-chart {
+  width: 80%;
+  height: auto;
+}
+
+.axis path{fill:none;stroke:#777;shape-rendering:crispEdges}.tick text{font-family:Lato;font-size:13px}.svg-line-chart-point{fill:#fff;stroke-width:2px;cursor:pointer}div.svg-line-chart-tooltip{position:fixed;text-align:center;width:100px;padding-top:5px;padding-bottom:5px;font:12px sans-serif;background:#f5f5f5;border:0;pointer-events:none;opacity:0}.svg-line-chart-label{text-anchor:middle;font-weight:700;font-size:18px;font-family:Ubuntu,sans-serif}
+/*# sourceMappingURL=styles.css.map*/
